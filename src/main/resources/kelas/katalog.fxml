@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="kelas.controller.KatalogController" prefWidth="1000.0" prefHeight="700.0"
+            stylesheets="@styles/app.css" styleClass="page">
+    <top>
+        <VBox spacing="12.0" styleClass="header-area">
+            <padding><Insets top="24" right="32" bottom="20" left="32"/></padding>
+            <Label text="TOKO KITA  •  KATALOG PRODUK" styleClass="brand-label"/>
+            <Label text="Temukan Produk Favoritmu" styleClass="page-title"/>
+            <Label text="Daftar makanan dan minuman pilihan." styleClass="muted-text"/>
+            <HBox spacing="10.0">
+                <TextField fx:id="searchField" promptText="Cari nama produk..." HBox.hgrow="ALWAYS"/>
+                <ComboBox fx:id="categoryFilter" prefWidth="170.0"/>
+                <Button text="Cari" onAction="#cariProduk" styleClass="primary-button"/>
+                <Button text="Reset" onAction="#resetFilter" styleClass="secondary-button"/>
+            </HBox>
+            <HBox spacing="10.0">
+                <Button text="+ Tambah Produk" onAction="#bukaForm" styleClass="primary-button"/>
+                <Button text="Lihat Daftar Tabel" onAction="#bukaDaftar" styleClass="secondary-button"/>
+            </HBox>
+        </VBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="catalog-scroll">
+            <content>
+                <VBox spacing="16.0">
+                    <padding><Insets top="24" right="32" bottom="32" left="32"/></padding>
+                    <Label text="Katalog Produk" styleClass="section-title"/>
+                    <FlowPane fx:id="productPane" hgap="18.0" vgap="18.0"/>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>

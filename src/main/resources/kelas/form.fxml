@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="kelas.controller.FormController" prefWidth="1000.0" prefHeight="700.0"
+            stylesheets="@styles/app.css" styleClass="page">
+    <center>
+        <VBox alignment="CENTER" spacing="18.0">
+            <padding><Insets top="35" right="40" bottom="35" left="40"/></padding>
+            <VBox maxWidth="520.0" spacing="14.0" styleClass="form-card">
+                <padding><Insets top="28" right="30" bottom="28" left="30"/></padding>
+                <Label text="TAMBAH PRODUK" styleClass="brand-label"/>
+                <Label text="Masukkan Data Produk" styleClass="page-title"/>
+                <Label text="Nama Produk" styleClass="field-label"/>
+                <TextField fx:id="namaField" promptText="Contoh: Roti Cokelat"/>
+                <Label text="Kategori" styleClass="field-label"/>
+                <ComboBox fx:id="kategoriBox" maxWidth="Infinity"/>
+                <Label text="Harga (Rp)" styleClass="field-label"/>
+                <TextField fx:id="hargaField" promptText="Contoh: 10000"/>
+                <Label fx:id="pesanLabel" styleClass="error-text" wrapText="true"/>
+                <HBox spacing="10.0">
+                    <Button text="Simpan Produk" onAction="#simpanProduk" styleClass="primary-button"/>
+                    <Button text="Kembali" onAction="#kembali" styleClass="secondary-button"/>
+                </HBox>
+            </VBox>
+        </VBox>
+    </center>
+</BorderPane>
