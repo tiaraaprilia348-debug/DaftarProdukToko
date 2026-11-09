@@ -45,3 +45,18 @@ Jika versi NetBeans tidak menyediakan pengaturan tersebut, FXML tetap bisa dibuk
 - Struktur layout halaman ada di FXML sehingga dapat diedit melalui Scene Builder.
 - Kartu produk di katalog dibuat secara dinamis oleh Java karena jumlah kartu mengikuti data produk.
 - Setelah mengubah FXML/CSS, simpan file dan jalankan ulang aplikasi untuk melihat hasilnya.
+  
+## Screenshot Aplikasi
+
+### 1. Halaman Katalog
+![Katalog](screenshots/katalogproduk.png)
+
+### 2. Halaman Form
+![Form](screenshots/formproduk.png)
+
+### 3. Halaman Daftar Produk
+![Daftar](screenshots/daftarproduk.png)
+
+### 4. Halaman Detail Produk
+![Detail](screenshots/detailproduk.png)
+
